@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="shortcut icon" href="p-icon.png">
+	<title>ProductiVision</title>
+
+	<script>
+				function startTime() {
+				    var today=new Date();
+				    var h1=today.getHours();
+				    var h2=today.getHours();
+				    var m=today.getMinutes();
+				    var s=today.getSeconds();
+				    h1 = twelveClock(h1);
+				    m = checkTime(m);
+				    s = checkTime(s);
+				    document.getElementById("txt1").innerHTML = h1+":"+m+":"+s;
+				    document.getElementById('txt2').innerHTML = h2+":"+m+":"+s;
+				    var t = setTimeout(function(){startTime()},500);
+				}
+
+				function checkTime(i) {
+				    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+				    return i;
+				}
+
+				function twelveClock(i) {
+				    if (i>12) {i = i-12};
+				    return i;
+				}
+
+				function changeTime(){
+				    var txt = document.getElementById("txt");
+				    txt.ondblclick = txtDblClick();
+				    function txtDblClick () {
+				        
+				    }
+				}
+			</script>
+</head>
+
+
+
+
+<body onload="startTime()">
+			
+
+	<div class="greeting">
+		<h1>Welcome to ProductiVision!</h1>
+	</div>
+
+	<h1><div class="clock" id="txt1"></div></h1>
+	<h1><div class="clock" id="txt2"></div></h1>
+
+
+	<div class="calendar">
+		
+	</div>
+
+	<div class="to-do">
+		
+	</div>
+
+	<div class="bg">
+  		
+	</div>
+</body>
+</html>
