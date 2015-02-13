@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+.media > .mediaBody {
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px !important;
+  *display: block;
+  *zoom: 1;
+  *width: auto !important;
+}
+
+.scale{
+  zoom: 1;
+}
+
+.main-clock{
+  font-size: ;
+}
+
+.date{
+  font-size: ;
+}
+
+/*Background image re-size*/
+img{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.5;
+}
+
+/*Buttons*/
+.task{
+
+}
+
+.add{
+
+}
+
+.delete{
+
+}
+
+.cancel{
+
+}
+
+/**/
