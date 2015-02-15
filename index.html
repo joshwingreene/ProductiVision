@@ -2,10 +2,10 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="shortcut icon" href="p-icon.png">
+	<link rel="shortcut icon" href"logo.jpg">
 	<title>ProductiVision</title>
 
-	//Clock
+	<!-- Clock -->
 	<script>
 		function startTime() {
 			var today = new Date();
@@ -16,8 +16,8 @@
 			h1 = twelveClock(h1);
 			m = checkTime(m);
 			s = checkTime(s);
-			document.getElementById("txt1").innerHTML = h1+":"+m+":"+s;
-			document.getElementById("txt2").innerHTML = h2+":"+m+":"+s;
+			document.getElementById("time12").innerHTML = h1+":"+m+":"+s;
+			document.getElementById("time24").innerHTML = h2+":"+m+":"+s;
 			var t = setTimeout(function(){startTime()},500);
 		}
 
@@ -26,6 +26,7 @@
 			  return i;
 		}
 
+		<!-- 12hr format -->
 		function twelveClock(i) {
 			if (i>12) {i = i-12};
 			  return i;
@@ -40,12 +41,13 @@
 		// }
 	</script>
 
+	<!-- returns the day of the week-->
 	<script>
 		function getDayOfWeek() {
 			var daytoday = new Date();
 			var day = daytoday.getDay();
 			day = setDay(day);
-			document.getElementById("day").innerHTML = "It is " + day;
+			document.getElementById("day_of_week").innerHTML = "Today is " + day;
 		}
 
 		function setDay(i) {
@@ -85,12 +87,86 @@
 			}
 		}
 	</script>
+
+	<!-- returns date -->
+	<script>
+		function getDate() {
+			var today = new Date();
+			var month = today.getMonth();
+			var date = today.getDate();
+			var year = today.getFullYear();
+			month = setMonth(month);
+			document.getElementById("today_date").innerHTML = "The date is " + month + " " + date + ", " + year;
+		}
+
+		function setMonth(i) {
+			if (i==0) {
+				i = "January";
+				return i;
+			}
+
+			else if (i==1) {
+				i = "February";
+				return i;
+			}
+
+			else if (i==2) {
+				i = "March";
+				return i;
+			}
+
+			else if (i==3) {
+				i = "April";
+				return i;
+			}
+
+			else if (i==4) {
+				i = "May";
+				return i;
+			}
+
+			else if (i==5) {
+				i = "June";
+				return i;
+			}
+
+			else if (i==6) {
+				i = "July";
+				return i;
+			}
+
+			else if (i==7) {
+				i = "August";
+				return i;
+			}
+
+			else if (i==8) {
+				i = "September";
+				return i;
+			}
+
+			else if (i==9) {
+				i = "October";
+				return i;
+			}
+
+			else if (i==10) {
+				i = "November";
+				return i;
+			}
+
+			else if (i==11) {
+				i = "December";
+				return i;
+			}
+		}
+	</script>
 </head>
 
 
 
 
-<body onload="startTime(); getDayOfWeek()">
+<body onload="startTime(); getDayOfWeek(); getDate()">
 			
 
 
@@ -99,9 +175,10 @@
 		<h1>Welcome to ProductiVision!</h1>
 	</div>
 
-	<h1><div class="clock" id="txt1"></div></h1>
-	<h1><div class="clock" id="txt2"></div></h1>
-	<h1><div class="clock" id="day"></div></h1>
+	<h2><div class="clock" id="time12"></div></h2>
+	<h2><div class="clock" id="time24"></div></h2>
+	<h2><div class="day_of_week" id="day_of_week"></div></h2>
+	<h2><div class="today_date" id="today_date"></div></h2>
 
 
 	<div class="calendar">
