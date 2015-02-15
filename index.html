@@ -5,46 +5,95 @@
 	<link rel="shortcut icon" href="p-icon.png">
 	<title>ProductiVision</title>
 
+	//Clock
 	<script>
-				function startTime() {
-				    var today=new Date();
-				    var h1=today.getHours();
-				    var h2=today.getHours();
-				    var m=today.getMinutes();
-				    var s=today.getSeconds();
-				    h1 = twelveClock(h1);
-				    m = checkTime(m);
-				    s = checkTime(s);
-				    document.getElementById("txt1").innerHTML = h1+":"+m+":"+s;
-				    document.getElementById('txt2').innerHTML = h2+":"+m+":"+s;
-				    var t = setTimeout(function(){startTime()},500);
-				}
+		function startTime() {
+			var today = new Date();
+			var h1 = today.getHours();
+			var h2 = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			h1 = twelveClock(h1);
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById("txt1").innerHTML = h1+":"+m+":"+s;
+			document.getElementById("txt2").innerHTML = h2+":"+m+":"+s;
+			var t = setTimeout(function(){startTime()},500);
+		}
 
-				function checkTime(i) {
-				    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-				    return i;
-				}
+		function checkTime(i) {
+			if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+			  return i;
+		}
 
-				function twelveClock(i) {
-				    if (i>12) {i = i-12};
-				    return i;
-				}
+		function twelveClock(i) {
+			if (i>12) {i = i-12};
+			  return i;
+		}
 
-				function changeTime(){
-				    var txt = document.getElementById("txt");
-				    txt.ondblclick = txtDblClick();
-				    function txtDblClick () {
-				        
-				    }
-				}
-			</script>
+		// function changeTime(){
+		//     var txt1 = document.getElementById("txt1");
+		//     var txt2 = document.getElementById("txt2");
+		//     txt.ondblclick = txtDblClick();
+		//     function txtDblClick () { 
+		//     }
+		// }
+	</script>
+
+	<script>
+		function getDayOfWeek() {
+			var daytoday = new Date();
+			var day = daytoday.getDay();
+			day = setDay(day);
+			document.getElementById("day").innerHTML = "It is " + day;
+		}
+
+		function setDay(i) {
+			if (i==1) {
+				i = "Monday";
+				return i;
+			}
+
+			else if (i==2) {
+				i = "Tuesday" + i;
+				return i;
+			}
+
+			else if (i==3) {
+				i = "Wednesday";
+				return i;
+			}
+
+			else if (i==4) {
+				i = "Thursday";
+				return i;
+			}
+
+			else if (i==5) {
+				i = "Friday";
+				return i;
+			}
+
+			else if (i==6) {
+				i = "Saturday";
+				return i;
+			}
+
+			else if (i==0) {
+				i = "Sunday";
+				return i;
+			}
+		}
+	</script>
 </head>
 
 
 
 
-<body onload="startTime()">
+<body onload="startTime(); getDayOfWeek()">
 			
+
+
 
 	<div class="greeting">
 		<h1>Welcome to ProductiVision!</h1>
@@ -52,6 +101,7 @@
 
 	<h1><div class="clock" id="txt1"></div></h1>
 	<h1><div class="clock" id="txt2"></div></h1>
+	<h1><div class="clock" id="day"></div></h1>
 
 
 	<div class="calendar">
@@ -65,5 +115,29 @@
 	<div class="bg">
   		
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 </body>
 </html>
