@@ -74,20 +74,12 @@ h1 {
 }
 
 .greeting {
-  padding-top: 200px;
+  padding-top: 250px;
   text-align: center;
 
 }
 
 .clock {
-  text-align: center;
-}
-
-.day_of_week {
-  text-align: center;
-}
-
-.today_date {
   text-align: center;
 }
 
