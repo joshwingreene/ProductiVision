@@ -26,7 +26,7 @@ function twelveClock(i) {
 //     var txt1 = document.getElementById("txt1");
 //     var txt2 = document.getElementById("txt2");
 //     txt.ondblclick = txtDblClick();
-//     function txtDblClick () { 
+//     function txtDblClick () {
 //     }
 // }
 
@@ -130,3 +130,6 @@ function setMonth(i) {
 		return i;
 	}
 }
+
+// Call startTime() when elements with the background class load (the body tag)
+document.querySelector(".background").addEventListener("onload", startTime());
