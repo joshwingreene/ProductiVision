@@ -4,13 +4,18 @@
 "version": "1.0.0",
 "manifest_version": 2,
 "chrome_url_overrides" : {
-    "newtab": "index.html"
+    "newtab": "storage_testing.html"
   },
 "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "css": ["css/bootstrap.css", "css/style"],
-      "js": ["js/production.js"]
+      "js": ["js/production.js","storage_testing.js"]
     }],
-"web_accessible_resources": ["js/production.js"]
+"web_accessible_resources": [
+    "js/production.js", "storage_testing.js"
+  ],
+"permissions": [
+  "storage"
+  ]
 }
