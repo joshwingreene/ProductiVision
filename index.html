@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link type="text/css" rel="stylesheet"  href="css/style1.css">
 		<link rel="shortcut icon" href="p-icon.png">
 		<title>ProductiVision</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="shortcut icon" href"logo.jpg">
 		<title>ProductiVision</title>
 	</head>
@@ -13,36 +12,119 @@
 
 
 
-	<body class ="background" background="images/background1.jpg" onload="startTime()">
-		<section>			
+<body class ="background" background="images/background1.jpg">
+	<div class="colmask threecol">
+		<div class="colmid">
+			<div class="colleft">
+				<div class="col-md-2 bookmark">
 
-			<div class="greeting main-class">
-				<h1>Welcome to ProductiVision!</h1>
-			</div>
-
-			<h2 class="main-clock"><div class="clock" id="time12"></div></h2>
-			<h2><div class="clock" id="time24"></div></h2>
-			<h2><div class="day_of_week" id="day_of_week"></div></h2>
-			<h2><div class="today_date" id="today_date"></div></h2>
-
-			<h1><div class="clock" id="txt1"></div></h1>
-			<h1><div class="clock" id="txt2"></div></h1>
-
-
-			<div class="calendar">
+					<!-- Column 1 start -->
+						Name: <input class="change-size" type="text" id="Name">
+						<br>
+						URL: <input class="change-size" type="text" id="URL">
+						<button class="btn-primary move-button" type="button" onclick="buttonclick()" class="btn">ADD</button>
+					<!-- Column 1 end -->
 				
-			</div>
+				</div>
+				<div class="col-md-8">
+					<!-- Column 2 start -->
+					<div class="main-class">
+						<h2 id="main-clock"><div class="clock" id="time12"></div></h2>
+						<h2><div class="clock" id="time24"></div></h2>
+						<h4 id="date-font"><div class="day_of_week" id="day_of_week">Weekday Palceholder</div></h4>
+						<h4 id="date-font"><div class="today_date date_font" id="today_date">Date Placeholder</div></h4>
 
-			<div class="to-do">
-				
-			</div>
+						<h1><div class="clock" id="txt2"></div></h1>
+						<h1><div class="clock" id="txt1"></div></h1>
+						<div class="calendar">
+							<table class="calendar" border="2" cellspacing="1" cellpadding="1">
+								<thead class="head-color">
+									<tr>
+										<td colspan="7" align="center">March</td>
+									</tr>
+									<tr>
+										<td>Sun <span class="date-number">1</span></td>
+										<td>Mon <span class="date-number">2</span></td>
+										<td>Tue <span class="date-number">3</span></td>
+										<td>Wed <span class="date-number">4</span></td>
+										<td>Thu <span class="date-number">5</span></td>
+										<td>Fri <span class="date-number">6</span></td>
+										<td>Sat <span class="date-number">7</span></td>
+									</tr>
+								</thead>
+								<tbody class="body-color">
+									<tr>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+												<li>Write stuff</li>
+												<li>Make stuff</li>
+												<li>Write stuff</li>
+												<li>Make stuff</li>
+												<li>Write stuff</li>
+												<li>Make stuff</li>
+											</ul>
+										</td>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+												<li class="list-item">Order Stuff</li>
+											</ul>
+										</td>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+												<li class="list-item">Go to fundraiser</li>
+											</ul>
+										</td>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+												<li class="list-item">Travel</li>
+												<li class="list-item">Make money</li>
+											</ul>
+										</td>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+												<li class="list-item">Get Money</li>
+												<li class="list-item">Play one-on-one with highschool thug for glory</li>
+											</ul>
+										</td>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+											</ul>
+										</td>
+										<td class"body-cell">
+											<ul class="list-unstyled">
+												<li class="list-item">Write more stuff</li>
+												<li class="list-item">Make more stuff</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
 
-			<div class="bg">
-		  		
-			</div>
-		</section>
+					<div class="to-do">
+					
+					</div>
 
-		<script src="js/production.js"></script>
+					<div class="bg">
+			  		
+					</div>	
+				</div>
+				<!-- Column 2 end -->
+				<div class="col-md-2 todo bookmark">
+					<!-- Column 3 start -->
+					<p class="todo">New Task: </p>
+					<input class="change-size" type="text" id="task" onkeydown="if (event.keyCode == 13) entertask()"/>
+					
+					<!-- Column 3 end -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/production.js"></script>
 
 	</body>
 </html>

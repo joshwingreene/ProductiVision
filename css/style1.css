@@ -1,0 +1,162 @@
+/*
+===================================================
+
+Classes for styling specific components of the page
+
+===================================================
+*/
+
+html, body{
+  height:100%;
+}
+
+/*Scale page to be responsive*/
+.scale{
+  zoom: 1;
+}
+.greeting-text{
+  font-size: 50px;
+  text-align: center;
+}
+#main-clock{
+  font-size: 100px;
+  /*position: fixed;*/
+  /*top: 30px;*/
+}
+
+h4#date-font{
+  font-size: 40px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+div.bookmark{
+  background: black;
+  background:rgba(0,0,0,0.4);
+  /*color: white;*/
+  margin-top: 0px !important;
+  padding-bottom: 3px;
+  /*height: 100%;*/
+}
+
+
+.move-button{
+  margin-top: 5px;
+  float: right;
+  /*position: relative;
+  top:50px;
+  right: 80px;
+  background-color: #395ECC;*/
+}
+
+
+/*TODO LIST*/
+/*div.todo{
+  padding-left: 0px !important;
+  margin-top: 0px !important;
+}*/
+.todo-label{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 5px;
+}
+
+.todo-input{
+  position:relative;
+}
+
+
+
+
+input.change-size{
+  width: 207px;
+  margin-bottom: 5px;
+  color: black;
+
+
+}
+
+/*Background image re-size*/
+.background{
+  /*background-image: url("images/background1.jpg");*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  background-size: 100% 100%;
+  /*min-width: 100%;
+  min-height: 100%;*/
+}
+
+
+
+
+
+/*Buttons*/
+.task{
+
+}
+
+.add{
+
+}
+
+.delete{
+
+}
+
+.cancel{
+
+}
+
+/*Calendar*/
+table#month tr#mo td.twelve {
+  font-size: 20px;
+  text-align: center;
+}
+
+ul .events{
+  list-style: none !important;
+  font-size: small!important;
+  padding: 0;
+  margin:0;
+}
+
+li.list-item{
+  list-style-type: none;
+  font-size: small;
+  text-align: left;
+  padding-bottom: 6px;
+  margin:0;
+}
+
+table.calendar{
+  width: 100%; 
+  border: 2px; 
+  border-style: solid;
+  table-layout: fixed;
+
+}
+
+thead.head-color{
+  background-color: #47A3FF;
+  border-style: solid solid hidden solid;
+}
+
+.body-color{
+  background-color: #D9E3EF;
+  border-style: solid;
+}
+
+.date-number{
+  float: right;
+  padding-right: 5px;
+}
+
+.body-cell{
+  border-style: hidden double double double;
+  height: 120px;
+}

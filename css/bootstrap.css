@@ -1116,13 +1116,13 @@ th {
           box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  /*font-size: 10px;*/
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  /*font-size: 14px;*/
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
@@ -1301,19 +1301,19 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 150px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 100px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 70px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 40px;
 }
 h5,
 .h5 {
@@ -1453,6 +1453,7 @@ ol ol {
 .list-unstyled {
   padding-left: 0;
   list-style: none;
+  line-height: 15.5px;
 }
 .list-inline {
   padding-left: 0;
@@ -2276,7 +2277,8 @@ pre code {
   }
 }
 table {
-  background-color: transparent;
+  background-color: #D0D0C5;
+  opacity: 75%;
 }
 caption {
   padding-top: 8px;
@@ -2298,10 +2300,11 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.42857143;
+  padding: 1px;
+  line-height: 1.1;
   vertical-align: top;
   border-top: 1px solid #ddd;
+  table-layout: fixed;
 }
 .table > thead > tr > th {
   vertical-align: bottom;

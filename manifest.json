@@ -3,9 +3,19 @@
 "description": "This is a new tab page for productivity",
 "version": "1.0.0",
 "manifest_version": 2,
-"icons": {
-"128": "youricon.png"
-},
-"chrome_url_overrides" : { "yourHTML.html": ""
-}
+"chrome_url_overrides" : {
+    "newtab": "storage_testing.html"
+  },
+"content_scripts": [
+	{
+	"matches": ["<all_urls>"],
+	"css": ["css/bootstrap.css", "css/style1.css"],
+	"js": ["js/production.js", "storage_testing.js"]
+	}],
+"web_accessible_resources": [
+	"js/production.js", "storage_testing.js"
+	],
+"permissions": [
+	"storage"
+	]
 }

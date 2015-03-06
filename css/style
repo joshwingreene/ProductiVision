@@ -6,19 +6,31 @@ Classes for styling specific components of the page
 ===================================================
 */
 
+html{
+  min-height: 100%;
+  position: relative;
+}
+body{
+  height:100%;
+}
+
 /*Scale page to be responsive*/
 .scale{
   zoom: 1;
 }
-
-.main-clock{
-  font-size: 150px;
+.greeting-text{
+  font-size: 50px;
+  text-align: center;
+}
+#main-clock{
+  font-size: xx-large;
   /*position: fixed;*/
   /*top: 30px;*/
 }
 
-.date{
-  font-size: ;
+.date-font-puss{
+  font-size: 60px;
+  text-align: center;
 }
 
 /*Background image re-size*/
@@ -33,6 +45,93 @@ Classes for styling specific components of the page
   /*min-width: 100%;
   min-height: 100%;*/
 }
+
+/* layout */
+#layoutdims {
+  clear:both;
+  background:#eee;
+  border-top:4px solid #000;
+  margin:0;
+  padding:6px 15px !important;
+  text-align:right;
+}
+/* column container */
+.colmask {
+  position:relative;  /* This fixes the IE7 overflow hidden bug */
+  clear:both;
+  float:left;
+  width:100%;     /* width of whole page */
+  overflow:hidden;    /* This chops off any overhanging divs */
+  margin-top: 10px;
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+  float:left;
+  width:100%;     /* width of page */
+  position:relative;
+}
+.col1,{
+  float:left;
+  width: 25%;
+  position:absolute;
+  padding:0 0 1em 0;  /* no left and right padding on columns, we just make them narrower instead 
+          only padding top and bottom is included here, make it whatever value you need */
+  top:25px;
+  bottom: 0;
+  left: 0;
+  right:0;
+  overflow:hidden;
+}
+.col2{
+  position:absolute;
+  top:25px;
+  bottom: 0px;
+  display:inline-block;
+  width:50%;
+}
+.col3{
+  position:absolute;
+  float:right;
+  width: 25%;
+  position:relative;
+  padding:0 0 1em 0;  /* no left and right padding on columns, we just make them narrower instead 
+          only padding top and bottom is included here, make it whatever value you need */
+  top:25%;
+  bottom: 0;
+  left: 0;
+  right:0;
+  overflow:hidden;
+}
+
+/* 3 Column settings */
+.threecol {
+  background:#eee;    /* right column background colour */
+}
+.threecol .colmid {
+  right:25%;      /* width of the right column */
+  background:#fff;    /* center column background colour */
+}
+.threecol .colleft {
+  right:50%;      /* width of the middle column */
+  background:#f4f4f4; /* left column background colour */
+}
+.threecol .col1 {
+  width:46%;      /* width of center column content (column width minus padding on either side) */
+  left:102%;      /* 100% plus left padding of center column */
+}
+.threecol .col2 {
+  width:21%;      /* Width of left column content (column width minus padding on either side) */
+  left:31%;     /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.threecol .col3 {
+  width:21%;      /* Width of right column content (column width minus padding on either side) */
+  left:85%;     /* Please make note of the brackets here:
+          (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
+
+
 
 /*Buttons*/
 .task{
@@ -51,4 +150,35 @@ Classes for styling specific components of the page
 
 }
 
-/**/
+/*Calendar*/
+table#month tr#mo td.twelve {
+  font-size: 20px;
+  text-align: center;
+}
+
+ul .events{
+  list-style-type: none !important;
+  font-size: small!important;
+  text-align: left !important;
+  padding: 0;
+  margin:0;
+}
+
+li{
+  list-style-type: none;
+  font-size: small;
+  text-align: left;
+  padding: 0;
+  margin:0;
+}
+
+table{
+  width=90%; 
+  border=1; 
+
+}
+
+.weekday{
+  font-size: 16px;
+  text-align: center;
+}

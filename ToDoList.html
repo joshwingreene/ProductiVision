@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+New Task: <input type = "text" id = "task" onkeydown= "if (event.keyCode == 13) entertask()"/>
+
+
+
+<script language = "javascript">
+
+function entertask(){
+	task = document.getElementById("task").value
+	taskNode = document.createTextNode(task)
+
+	if (task == ""){
+		return;
+		}
+
+	para = document.createElement("P")
+	document.body.appendChild(para)
+
+	var check = document.createElement("input")
+	check.type = "checkbox"
+	document.body.appendChild(check)
+	document.body.appendChild(taskNode)
+
+
+
+
+
+
+	document.getElementById("task").value = ""
+	}
+
+
+
+</script>
+
+
+
+
+
+

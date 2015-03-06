@@ -17,7 +17,7 @@ function checkTime(i) {
 	if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
 	  return i;
 }
-<!-- 12hr format -->
+// <!-- 12hr format -->
 function twelveClock(i) {
 	if (i>12) {i = i-12};
 	  return i;
@@ -129,4 +129,83 @@ function setMonth(i) {
 		i = "December";
 		return i;
 	}
+}
+
+// Call startTime() when elements with the background class load (the body tag)
+document.querySelector(".background").addEventListener("onload", startTime());
+
+// BOOKMARK V1.1
+function hideshow(ele)
+	{
+	if (!document.getElementById)
+	return
+	if (ele.style.display == "block")
+	ele.style.display="none"
+	else
+	ele.style.display="block"
+	}
+	
+var add = document.createElement("BUTTON")
+// var button_text = document.createTextNode("ADD")
+add.appendChild(button_text)
+document.body.appendChild(add)
+
+add.onclick=function()
+	{
+	para = document.createElement("P")
+	document.body.appendChild(para)
+	bookmark = [document.getElementById("Name").value,document.getElementById("URL").value]
+	var link = document.createElement("A")
+	var linktext = document.createTextNode(bookmark[0])
+	link.appendChild(linktext)
+	link.title = bookmark[0]
+	link.href = bookmark[1]
+	document.body.appendChild(link) 
+	
+	var remove = document.createElement("BUTTON")
+	var button_text = document.createTextNode("REMOVE")
+	remove.appendChild(button_text)
+	document.body.appendChild(remove)
+	remove.style.visibility = "hidden"
+	
+	remove.onclick = function()
+		{
+		document.body.removeChild(link)
+		document.body.removeChild(remove)
+		}
+	
+	link.onmouseover = function()
+		{
+		remove.style.visibility = "visible"
+		}
+	link.onmouseout = function()
+		{
+		setTimeout(function(){remove.style.visibility = "hidden"},1000)
+		}
+	}
+
+
+// Tasklist
+function entertask(){
+	task = document.getElementById("task").value
+	taskNode = document.createTextNode(task)
+
+	if (task == ""){
+		return;
+		}
+
+	para = document.createElement("P")
+	document.body.appendChild(para)
+
+	var check = document.createElement("input")
+	check.type = "checkbox"
+	document.body.appendChild(check)
+	document.body.appendChild(taskNode)
+
+
+
+
+
+
+	document.getElementById("task").value = ""
 }
